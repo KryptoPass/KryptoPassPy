@@ -24,7 +24,7 @@ class SecondsFormatter(logging.Formatter):
         record.relativeCreated /= 1000
         return super().format(record)
 
-FORMAT = '%(relativeCreated)s | %(name)s | %(levelname)s | [%(message)s]'
+FORMAT = '%(relativeCreated)f | %(name)s | %(levelname)s | [%(message)s]'
 logger = getLogger('KryptoPass')
 handler = logging.StreamHandler()
 handler.setFormatter(SecondsFormatter(FORMAT))

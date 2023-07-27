@@ -194,3 +194,18 @@ msgstr "%(prog)s: error: %(message)s\n"
 #  ***********************************************************************
 
 # KryptoPass
+
+#: KryptoPass/cli/__init__.py:6
+#, python-format
+msgid "parser_prog_message"
+msgstr "KryptoPass"
+
+#: KryptoPass/cli/__init__.py:6
+#, python-format
+msgid "parser_description_message"
+msgstr "Bienvenido a KryptoPass. Gestiona tus contraseñas desde el terminal."
+
+#: KryptoPass/cli/__init__.py:6
+#, python-format
+msgid "parser_epilog_message"
+msgstr "Consulte la documentación para obtener más información kryptopass.org/docs/cli"
