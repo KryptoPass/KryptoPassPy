@@ -1,20 +1,27 @@
 # !/usr/bin/python
 # -*- coding: utf-8 -*-
 
+from utility.constants import KryptoPass as KP
 from utility.locales import Translation
-from utility.constants import KryptoPass
+from utility.logger import logger
 import os, sys
 
-Translation(os.path.join(os.path.dirname(__file__), "locales"))
+logger.debug("TEST")
+translation = Translation(os.path.join(os.path.dirname(__file__), "locales"))
+logger.debug("TEST")
 
 def main():
-    from utility.logger import logger
+    from libs.config import init
+
+    Config = init({"language": "en"})
+
     logger.info(
-        '%(name)s: %(version)s id: %(id)s' % {
-        "name":  KryptoPass.NAME.value,
-        "version": KryptoPass.VERSION.value,
-        "id":KryptoPass.NAMESPACE.value
+        '%(name)s: v%(version)s  id: %(id)s' % {
+        "name":  KP.NAME.value,
+        "version": KP.VERSION.value,
+        "id":KP.NAMESPACE.value
         })
+    
     import cli
 
 if __name__ == "__main__":

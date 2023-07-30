@@ -1,9 +1,0 @@
-{
-  "CLI": {
-    "APP001": "KryptoPass",
-    "APD001": "Welcome to KryptoPass. Manage your passwords from the terminal.",
-    "APE001": "Check the documentation for more kryptopass.org/docs/cli",
-    "PAH001": "Log level in the console"
-  },
-  "ERRORS": {}
-}

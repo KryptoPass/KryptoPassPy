@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<KeePassFile>
+	<Root>
+		<Group>
+			<UUID>Ki5lW6b6UEiTJWPVz/72Bw==</UUID>
+			<Name>Database</Name>
+			<Notes></Notes>
+			<IconID>49</IconID>
+			<Times>
+				<CreationTime>2023-07-27T13:24:30Z</CreationTime>
+				<LastModificationTime>2023-07-27T13:24:30Z</LastModificationTime>
+				<LastAccessTime>2023-07-27T13:26:36Z</LastAccessTime>
+				<ExpiryTime>2023-07-27T13:20:48Z</ExpiryTime>
+				<Expires>False</Expires>
+				<UsageCount>6</UsageCount>
+				<LocationChanged>2023-07-27T13:24:30Z</LocationChanged>
+			</Times>
+			<IsExpanded>True</IsExpanded>
+			<DefaultAutoTypeSequence></DefaultAutoTypeSequence>
+			<EnableAutoType>null</EnableAutoType>
+			<EnableSearching>null</EnableSearching>
+			<LastTopVisibleEntry>gWFnNRNSqES6gsp/qHywfQ==</LastTopVisibleEntry>
+			<Entry>
+				<UUID>gWFnNRNSqES6gsp/qHywfQ==</UUID>
+				<IconID>0</IconID>
+				<ForegroundColor></ForegroundColor>
+				<BackgroundColor></BackgroundColor>
+				<OverrideURL></OverrideURL>
+				<Tags></Tags>
+				<Times>
+					<CreationTime>2023-07-27T13:24:37Z</CreationTime>
+					<LastModificationTime>2023-07-27T13:24:37Z</LastModificationTime>
+					<LastAccessTime>2023-07-27T13:24:37Z</LastAccessTime>
+					<ExpiryTime>2023-07-27T13:20:48Z</ExpiryTime>
+					<Expires>False</Expires>
+					<UsageCount>0</UsageCount>
+					<LocationChanged>2023-07-27T13:24:37Z</LocationChanged>
+				</Times>
+				<String>
+					<Key>Notes</Key>
+					<Value>Notes</Value>
+				</String>
+				<String>
+					<Key>Password</Key>
+					<Value ProtectInMemory="True">Password</Value>
+				</String>
+				<String>
+					<Key>Title</Key>
+					<Value>Sample Entry</Value>
+				</String>
+				<String>
+					<Key>URL</Key>
+					<Value>https://keepass.info/</Value>
+				</String>
+				<String>
+					<Key>UserName</Key>
+					<Value>User Name</Value>
+				</String>
+				<AutoType>
+					<Enabled>True</Enabled>
+					<DataTransferObfuscation>0</DataTransferObfuscation>
+					<Association>
+						<Window>Target Window</Window>
+						<KeystrokeSequence>{USERNAME}{TAB}{PASSWORD}{TAB}{ENTER}</KeystrokeSequence>
+					</Association>
+				</AutoType>
+				<History />
+			</Entry>
+			<Group>
+				<UUID>pOOYmQVVDU6MQHMwEKHQ+A==</UUID>
+				<Name>Homebanking</Name>
+				<Notes></Notes>
+				<IconID>37</IconID>
+				<Times>
+					<CreationTime>2023-07-27T13:24:37Z</CreationTime>
+					<LastModificationTime>2023-07-27T13:24:37Z</LastModificationTime>
+					<LastAccessTime>2023-07-27T13:24:37Z</LastAccessTime>
+					<ExpiryTime>2023-07-27T13:20:48Z</ExpiryTime>
+					<Expires>False</Expires>
+					<UsageCount>0</UsageCount>
+					<LocationChanged>2023-07-27T13:24:37Z</LocationChanged>
+				</Times>
+				<IsExpanded>True</IsExpanded>
+				<DefaultAutoTypeSequence></DefaultAutoTypeSequence>
+				<EnableAutoType>null</EnableAutoType>
+				<EnableSearching>null</EnableSearching>
+				<LastTopVisibleEntry>AAAAAAAAAAAAAAAAAAAAAA==</LastTopVisibleEntry>
+			</Group>
+		</Group>
+		<DeletedObjects />
+	</Root>
+</KeePassFile>

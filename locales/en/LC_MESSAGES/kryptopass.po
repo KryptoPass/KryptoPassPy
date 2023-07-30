@@ -12,7 +12,7 @@
 #
 #  WARNING! This software is distributed in the hope that it will be useful, but
 #  WITHOUT ANY WARRANTY. For more details, refer to the GNU General Public License.
-#  ******************************************************************************
+#  *************************************************************************************
 
 #  ***********************************************************************
 #  *                                HEADER                                
@@ -26,7 +26,7 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Gabriel Maizo <maizogabriel@gmail.com>\n"
 "Language-Team: KryptoPass <language@kryptopass.org>\n"
-"Language: es\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -201,7 +201,7 @@ msgstr "KryptoPass"
 #: KryptoPass/cli/__init__.py:9
 #, python-format
 msgid "parser.description"
-msgstr "Bienvenido a KryptoPass. Gestiona tus contraseñas desde el terminal."
+msgstr "Bdfsfdsminal."
 
 #: KryptoPass/cli/__init__.py:9
 #, python-format
@@ -276,6 +276,7 @@ msgstr "set the number of words for the passphrase"
 msgid "parser.generator_passphrase.passphrase.argument_separator_help"
 msgstr "sets the separator character to use"
 
+
 #: KryptoPass/cli/__init__.py:23
 #, python-format
 msgid "parser.generator_passphrase.passphrase.argument_dict_help"
@@ -314,8 +315,3 @@ msgid "parser.generator_key.key.argument_file_help"
 msgstr "path to save the file | note this option will replace everything in content"
 
 #  ****************************** Hash Parser ****************************
-
-#: KryptoPass/cli/__init__.py:23
-#, python-format
-msgid "parser.hash_parser.hash_help"
-msgstr "Calculate the hash of text and files with different algorithms"

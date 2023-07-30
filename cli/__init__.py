@@ -1,31 +1,34 @@
 from gettext import gettext as _
-from tabulate import tabulate
 import argparse
 import sys
 
-from libs.cryptography.hash import hash, ALGORITHMS_AVAILABLE
-from libs.cryptography.generator import passwords, keys
+from libs.config import Config
 
-parser = argparse.ArgumentParser(_("parser_prog_message"), description=_("parser_description_message"), epilog=_("parser_epilog_message"))
-parser.add_argument("--verbose", "-v", default=0, action="count", help="Establece el nivel de los registros visualizados en la consola")
-subparser = parser.add_subparsers()
+
+from libs.cryptography.hash import ALGORITHMS_AVAILABLE
+from utility.logger import setLevel
+
+parser = argparse.ArgumentParser(_("parser.prog"), description=_("parser.description"), epilog=_("parser.epilog"))
+parser.add_argument("--verbose", "-v", default=1, action="count", help=_("parser.argument_verbose_help"))
+
+subparser = parser.add_subparsers(dest="action")
 
 # Subparser to manage tools
 tools = subparser.add_parser("tools")
 tools_subparser = tools.add_subparsers(dest="tools", required=True)
 
 # Subparser for password, passphrase, and encryption key generation
-generate_parser = tools_subparser.add_parser(name="generate", help="Generate passwords, passphrases, and encryption keys")
+generate_parser = tools_subparser.add_parser(name="generate", help=_("generate_parser.generate_help"))
 generate_subparser = generate_parser.add_subparsers(dest="generate", required=True)
 
 # Password Generator
-generator_password = generate_subparser.add_parser(name="password", help="Generate a random password")
-generator_password.add_argument("--length", "-l", action="store", help="sets the number of characters for the password", default=10, type=int)
-generator_password.add_argument("--specials", "-s", action="store_true", help="add special characters #$'()*+...")
-generator_password.add_argument("--upper", "-u", action="store_true", help="add capital letters")
-generator_password.add_argument("--digits", "-d", action="store_true", help="add digits (0123456789)")
-generator_password.add_argument("--emojis", "-e", action="store_true", help="add emoticons (emojis) from Unicode version 6.0 (2010)")
-generator_password.add_argument("--quantum", "-q", action="store_true", help="uses a seed of quantum random numbers to generate the password (requires internet connection)")
+generator_password = generate_subparser.add_parser(name="password", help=_("parser.generate_subparser.password_help"))
+generator_password.add_argument("--length", "-l", action="store", help=_("parser.generate_subparser.password.argument_length_help"), default=10, type=int)
+generator_password.add_argument("--specials", "-s", action="store_true", help=_("parser.generate_subparser.password.argument_specials_help"))
+generator_password.add_argument("--upper", "-u", action="store_true", help=_("parser.generate_subparser.password.argument_upper_help"))
+generator_password.add_argument("--digits", "-d", action="store_true", help=_("parser.generate_subparser.password.argument_digits_help"))
+generator_password.add_argument("--emojis", "-e", action="store_true", help=_("parser.generate_subparser.password.argument_emojis_help"))
+generator_password.add_argument("--quantum", "-q", action="store_true", help=_("parser.generate_subparser.password.argument_quantum_help"))
 
 # Passphrase Generator
 generator_passphrase = generate_subparser.add_parser(name="passphrase", help="Generate a random passphrase")
@@ -74,4 +77,19 @@ if len(sys.argv) == 1:
     parser.print_help()
     sys.exit(0)
 
-parser.parse_args()
+arguments = parser.parse_args()
+
+if arguments.verbose and arguments.verbose <= 0 or arguments.verbose > 4:
+    raise parser.error(f"Verbose count must be between 1 and 4")
+else:
+    setLevel(arguments.verbose)
+
+if "tools" in arguments:
+    from .tools import parse_tools
+    parse_tools()
+elif arguments.action == "login":
+    from .login import parse_login
+    parse_login()
+else:
+    parser.print_help()
+    sys.exit(0)

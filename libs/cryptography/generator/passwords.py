@@ -1,5 +1,4 @@
 import os
-import secrets
 from libs.cryptography.random import Random
 
 ascii_lowercase = list("abcdefghijklmnopqrstuvwxyz")
@@ -45,7 +44,7 @@ def password(length=10, use_specials=False, use_upper=False, use_digits=False, u
 def passphrase(length, separator, dict, use_quantum):
     random = Random()
     if use_quantum: random.quantum()
-    
+
     path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "bip-0039", dict + ".txt")
     
     if dict not in {"chinese_simplified", "chinese_traditional", "czech", "english","french", "italian", "japanese", "korean","portuguese", "spanish"}:
